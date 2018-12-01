@@ -1,0 +1,100 @@
+views:
+  - title: Thuis
+    icon: mdi:home
+    cards:
+      - type: entities
+        title: Keuken-Verlichting
+        show_header_toggle: true
+        entities:
+          - light.kitchen
+          - light.ledstrip
+      - type: glance
+        title: Verlichting
+        show_state: false
+        entities: 
+          - light.ledstrip
+          - light.kitchen
+      - type: weather-forecast
+        entity: weather.br_unknown_station
+      - type: entities
+        title: NetAtmo
+        entities: 
+          - sensor.netatmo_indoor_co2
+          - sensor.netatmo_indoor_humidity
+          - sensor.netatmo_indoor_noise
+          - sensor.netatmo_indoor_pressure
+          - sensor.netatmo_indoor_temperature
+          - sensor.netatmo_indoor_wifi
+          - sensor.netatmo_outdoor_battery
+          - sensor.netatmo_outdoor_humidity
+          - sensor.netatmo_outdoor_radio
+          - sensor.netatmo_outdoor_temperature
+          
+  - title: Cameras
+    icon: mdi:cctv
+    cards:
+      - type: picture-entity
+        title: Camera Voordeur
+        entity: camera.camera_voordeur
+        camera_image: camera.camera_voordeur
+        show_info: true
+        tap_action: dialog
+      - type: picture-entity
+        title: Camera Voortuin
+        entity: camera.camera_voortuin
+        camera_image: camera.camera_voortuin
+        show_info: true
+        tap_action: dialog
+      - type: picture-entity
+        title: Camera Achtertuin
+        entity: camera.camera_achtertuin
+        camera_image: camera.camera_achtertuin
+        show_info: true
+        tap_action: dialog
+      - type: picture-entity
+        title: Camera LivingRoom
+        entity: camera.camera_livingroom
+        camera_image: camera.camera_livingroom
+        show_info: true
+        tap_action: dialog
+
+  - title: Verlichting
+    icon: mdi:lightbulb-on-outline
+    cards:
+      - type: entities
+        title: Keuken-Verlichting
+        show_header_toggle: true
+        entities:
+          - light.kitchen
+          - light.ledstrip
+      - type: glance
+        title: Verlichting
+        show_state: false
+        entities: 
+          - light.ledstrip
+          - light.kitchen
+      - type: entities
+        title: WOL Devices
+        show_header_toggle: false
+        entities:
+          - switch.skullnuc
+
+  - title: Cast
+    icon: mdi:cast-connected
+    cards:
+      - type: media-control 
+        entity: media_player.chromecastultra5777
+      - type: media-control
+        entity: media_player.bedroom_tv
+      - type: media-control
+        entity: media_player.lara_room_tv
+      - type: media-control
+        entity: media_player.speaker2
+      - type: media-control
+        entity: media_player.speaker1
+      - type: media-control
+        entity: media_player.lgspeakers
+      - type: media-control
+        entity: media_player.home_mini_speaker
+      - type: media-control
+        entity: media_player.allspeakers

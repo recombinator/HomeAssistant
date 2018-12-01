@@ -1,0 +1,2 @@
+# HomeAssistant
+HomeAssistant Config Files
